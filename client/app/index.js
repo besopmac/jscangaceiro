@@ -29,4 +29,12 @@ document.querySelector('.form').addEventListener('submit', function(event) {
     tr.appendChild(tdVolume);
 
     tbody.appendChild(tr);
+
+    // limpando os campos
+    campos[0].value = ''; 
+    campos[1].value = ''; 
+    campos[2].value = '';
+    
+    // adicionando foco no primeiro campo
+    campos[0].focus();
 });
