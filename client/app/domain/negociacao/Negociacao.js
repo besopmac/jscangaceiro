@@ -9,6 +9,9 @@ class Negociacao {
         this._data = data;
         this._quantidade = quantidade;
         this._valor = valor;
+
+        // congelando a instância
+        Object.freeze(this);
     }
 
     /*
