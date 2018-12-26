@@ -11,23 +11,26 @@ class Negociacao {
         this._valor = valor;
     }
 
-    obtemVolume() {
-        return this._quantidade * this._valor;
-    }
-
     /*
-     * Para não quebrar a convenção citada acima
-     * são criados os métodos get, a.k.a GETTERS.
+     * Para não quebrar a convenção citada acima são
+     * criados os métodos de leitura, a.k.a GETTERS.
+     * 
+     * Apesar de criados como métodos, eles devem
+     * ser acessados como propriedades.
      */
-    getData() {
+    get data() {
         return this._data;
     }
 
-    getQuantidade() {
+    get quantidade() {
         return this._quantidade;
     }
 
-    getValor() {
+    get valor() {
         return this._valor;
+    }
+
+    get volume() {
+        return this._quantidade * this._valor;
     }
 }
