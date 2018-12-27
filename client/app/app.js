@@ -2,6 +2,4 @@
 let controller = new NegociacaoController();
 
 // associando o submit do formulário à chamada do método adiciona
-document.querySelector('.form').addEventListener('submit', function(event) {
-    controller.adiciona(event);
-});
+document.querySelector('.form').addEventListener('submit', controller.adiciona);
