@@ -1,19 +1,25 @@
 class NegociacaoController {
 
-    adiciona(event) {
-        event.preventDefault();
-        
-        // realizando o bind, $ mantém document como seu contexto this
+    constructor() {
         let $ = document.querySelector.bind(document);
 
-        // buscando elementos
-        let inputData = $('#data');
-        let inputQuantidade = $('#quantidade');
-        let inputValor = $('#valor');
+        this._inputData = $('#data');
+        this._inputQuantidade = $('#quantidade');
+        this._inputValor = $('#valor');
+    }
 
-        console.log(inputData.value);
-        console.log(parseInt(inputQuantidade.value)); // arredondando para inteiros
-        console.log(parseFloat(inputValor.value)); // arredondando para ponto flutuante
+    adiciona(event) {
+        event.preventDefault();
+
+        console.log(typeof(this._inputData.value));
+        
+        let negociacao = new Negociacao(
+            this._inputData.value,
+            parseInt(this._inputQuantidade.value),
+            parseFloat(rhis._inputValor)
+        );
+
+        console.log(negociacao);
     }
 
 }
