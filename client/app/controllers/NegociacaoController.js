@@ -16,7 +16,7 @@ class NegociacaoController {
         let negociacao = new Negociacao(
             this._inputData.value,
             parseInt(this._inputQuantidade.value),
-            parseFloat(rhis._inputValor)
+            parseFloat(this._inputValor)
         );
 
         console.log(negociacao);
